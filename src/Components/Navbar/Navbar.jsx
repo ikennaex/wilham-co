@@ -32,7 +32,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center gap-12">
+        <div className="hidden lg:flex items-center gap-3">
           {menuItems.map((menu) => {
             const isActive = location.pathname === menu.link;
             return menu.link.includes("#") ? (
@@ -51,7 +51,7 @@ const Navbar = () => {
               <Link
                 key={menu.name}
                 to={menu.link}
-                className={`relative text-sm font-semibold tracking-wide text-gray-300 hover:text-white transition-all duration-300 ${
+                className={`relative text-[11px] font-semibold tracking-wide text-gray-300 hover:text-white transition-all duration-300 ${
                   isActive ? "text-white" : ""
                 }`}
               >
