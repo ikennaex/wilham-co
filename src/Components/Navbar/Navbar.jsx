@@ -11,7 +11,7 @@ const menuItems = [
   { name: "FINANCE CONSULTING", link: "/" },
   { name: "TRAVEL & DIGITAL MARKETING AGENCY", link: "/" },
   { name: "About Us", link: "/about" },
-  { name: "Why Choose Us", link: "/advantages" },
+  { name: "Why Choose Us", link: "/whychooseus" },
   { name: "Contact", link: "/contact" },
 ];
 

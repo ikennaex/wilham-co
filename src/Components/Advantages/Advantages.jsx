@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const WhyChooseUs = () => {
   return (
@@ -27,9 +28,11 @@ const WhyChooseUs = () => {
             programme management.
           </p>
 
+          <Link to={"/whychooseus"}>
           <button className="mt-10 inline-block border border-customGreen px-6 py-3 text-white text-sm font-medium hover:bg-customOrange hover:text-black transition">
             Learn More
           </button>
+          </Link>
         </div>
       </div>
     </section>
