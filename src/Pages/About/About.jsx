@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -39,12 +40,15 @@ const About = () => {
 
             <div className="space-y-6 text-gray-300 text-base lg:text-lg leading-relaxed">
               <p>
-                <span className="text-customOrange font-bold">WILHAM & CO. LIMITED</span> is a team of experienced strategic management
-                consultants. We focus on maximizing people and corporate
-                performance. Our practice areas include Human Resource
-                Consulting, Business Consulting, Real Estate Marketing, Business
-                Contractors, Financial Management, Travel Consulting, Digital
-                Marketing Agency.
+                <span className="text-customOrange font-bold">
+                  WILHAM & CO. LIMITED
+                </span>{" "}
+                is a team of experienced strategic management consultants. We
+                focus on maximizing people and corporate performance. Our
+                practice areas include Human Resource Consulting, Business
+                Consulting, Real Estate Marketing, Business Contractors,
+                Financial Management, Travel Consulting, Digital Marketing
+                Agency.
               </p>
 
               <p>
@@ -77,10 +81,14 @@ const About = () => {
               </p>
 
               <p>
-                At <span className="text-customOrange font-bold">WILHAM & CO. LIMITED</span>, we transform possibilities by
-                collaborating with our clients to innovate towards optimal
-                performance. We understand that organizations have different
-                needs, so we do not adopt a one-size-fits-all approach.
+                At{" "}
+                <span className="text-customOrange font-bold">
+                  WILHAM & CO. LIMITED
+                </span>
+                , we transform possibilities by collaborating with our clients
+                to innovate towards optimal performance. We understand that
+                organizations have different needs, so we do not adopt a
+                one-size-fits-all approach.
               </p>
 
               <p>
@@ -96,6 +104,13 @@ const About = () => {
               </p>
             </div>
           </motion.div>
+          <div className="mt-12">
+            <Link to="/theteam">
+              <button className="inline-flex items-center gap-3 bg-customOrange px-9 py-4 text-black font-semibold hover:opacity-90 transition">
+                View Our Team Members
+              </button>
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>
