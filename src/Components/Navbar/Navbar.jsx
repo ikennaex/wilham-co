@@ -5,11 +5,11 @@ import { IoClose } from "react-icons/io5";
 import { logo } from "../../imports";
 
 const menuItems = [
-  { name: "HR CONSULTING", link: "/" },
-  { name: "REAL ESTATE MARKETING", link: "/" },
-  { name: "BUSINESS CONTRACTORS", link: "/" },
-  { name: "FINANCE CONSULTING", link: "/" },
-  { name: "TRAVEL & DIGITAL MARKETING AGENCY", link: "/" },
+  { name: "HR CONSULTING", link: "/hr-consulting" },
+  { name: "REAL ESTATE MARKETING", link: "/real-estate-marketing" },
+  { name: "BUSINESS CONTRACTORS", link: "/business-contractors" },
+  { name: "FINANCE CONSULTING", link: "/finance-consulting" },
+  { name: "TRAVEL & DIGITAL MARKETING AGENCY", link: "/travel-and-digital-marketing" },
   { name: "About Us", link: "/about" },
   { name: "Why Choose Us", link: "/whychooseus" },
   { name: "Contact", link: "/contact" },

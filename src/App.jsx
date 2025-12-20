@@ -12,6 +12,11 @@ import ScrollToTop from './Components/ScrollToTop'
 import PrivacyPolicy from './Pages/PrivacyPolicy/PrivacyPolicy'
 import Legal from './Pages/Legal/Legal'
 import Terms from './Pages/Terms/Terms'
+import HRConsulting from './Pages/HRConsulting/HRConsulting'
+import RealEstateMarketing from './Pages/ReaLEstateMarketing/RealEstateMarketing'
+import BusinessContractors from './Pages/BusinessContractors/BusinessContractors'
+import FinanceConsulting from './Pages/FinanceConsulting/FinanceConsulting'
+import TravelAndDigitalMarketing from './Pages/TravelAndDigitalMarketing/TravelAndDigitalMarketing'
 
 const App = () => {
   return (
@@ -28,6 +33,12 @@ const App = () => {
         <Route path = "/privacypolicy"  element = {<PrivacyPolicy />}/>
         <Route path = "/legal"  element = {<Legal />}/>
         <Route path = "/terms"  element = {<Terms />}/>
+
+        <Route path = "/hr-consulting"  element = {<HRConsulting />}/>
+        <Route path = "/real-estate-marketing"  element = {<RealEstateMarketing />}/> 
+        <Route path = "/business-contractors"  element = {<BusinessContractors />}/>
+        <Route path = "/finance-consulting"  element = {<FinanceConsulting />}/>
+        <Route path = "/travel-and-digital-marketing"  element = {<TravelAndDigitalMarketing />}/>
         <Route path = "*"  element={<p>Nothing to show</p>} />
       </Routes>
       <Footer />
