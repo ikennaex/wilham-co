@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const teamMembers = [
   {
@@ -57,7 +57,17 @@ from the International Institute of Marketing.
   },
 ];
 
+// helper function to shorten text
+const truncateText = (text, length = 200) =>
+  text.length > length ? text.slice(0, length) + "..." : text;
+
 const MeetTheTeam = () => {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleBio = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <section className="min-h-screen py-20 mt-24 px-6 lg:px-20 bg-white text-gray-800">
       <div className="max-w-6xl mx-auto space-y-12">
@@ -74,41 +84,74 @@ const MeetTheTeam = () => {
 
         {/* Team Grid */}
         <div className="grid gap-10 md:grid-cols-2">
-          {teamMembers.map((member, index) => (
-            <div
-              key={index}
-              className="
-                bg-gray-50 
-                rounded-2xl 
-                border 
-                border-gray-100 
-                p-8 
-                shadow-sm 
-                hover:shadow-md 
-                transition
-              "
-            >
-              {/* Profile */}
-              <div className="flex flex-col items-center text-center">
-                <img
-                  src={member.img}
-                  alt={member.name}
-                  className="w-32 h-32 rounded-full object-cover mb-4"
-                />
-                <h3 className="text-xl font-semibold text-gray-900">
-                  {member.name}
-                </h3>
-                <p className="text-customOrange text-sm mt-1">
-                  {member.role}
+          {teamMembers.map((member, index) => {
+            const isOpen = openIndex === index;
+
+            return (
+              <div
+                key={index}
+                onClick={() => toggleBio(index)}
+                className="
+                  group
+                  bg-gray-50 
+                  rounded-2xl 
+                  border 
+                  border-gray-100 
+                  p-8 
+                  shadow-sm 
+                  hover:shadow-md 
+                  transition
+                  cursor-pointer
+                "
+              >
+                {/* Profile */}
+                <div className="flex flex-col items-center text-center">
+                  <img
+                    src={member.img}
+                    alt={member.name}
+                    className="w-32 h-32 rounded-full object-cover mb-4"
+                  />
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    {member.name}
+                  </h3>
+                  <p className="text-customOrange text-sm mt-1">
+                    {member.role}
+                  </p>
+                </div>
+
+                {/* Biography */}
+                <div
+                  className={`
+                    mt-6
+                    text-sm 
+                    text-gray-700 
+                    leading-relaxed 
+                    whitespace-pre-line 
+                    transition-all 
+                    duration-300
+                    ${
+                      isOpen
+                        ? "max-h-[1200px]"
+                        : "max-h-[110px] overflow-hidden"
+                    }
+                    md:group-hover:max-h-[1200px]
+                  `}
+                >
+                  {isOpen
+                    ? member.bio
+                    : truncateText(member.bio)}
+                </div>
+
+                {/* Hint */}
+                <p className="mt-4 text-xs text-gray-400 md:hidden text-center">
+                  Tap to {isOpen ? "collapse" : "read more"}
+                </p>
+                <p className="mt-4 text-xs text-gray-400 hidden md:block text-center">
+                  Hover to read full biography
                 </p>
               </div>
-
-              {/* Biography */}
-              <div className="mt-6 text-sm text-gray-700 leading-relaxed space-y-4 whitespace-pre-line">
-                {member.bio}
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
