@@ -6,29 +6,14 @@ const teamMembers = [
     img: "/images/founder.png",
     name: "Anyanwu Chukwuemeka W.",
     bio: `
-Chukwuemeka is a distinguished finance executive, business strategist, and
-transformation leader with over a decade of professional experience across
-multiple industries. His expertise spans financial management, investment
-consulting, business advisory, and corporate restructuring.
+Chukwuemeka is a distinguished finance executive, business strategist, and transformation leader with over a decade of professional experience and excellence across various industries with expertise in financial management, investment consulting, business 
+advisory, and corporate restructuring. As the Founder and Chief Promoter of WILHAM & CO., he drives the firm’s mission of bridging investor trust gaps, restoring financial 
+transparency, and fostering sustainable business growth through expert consulting and strategic partnerships.  
 
-As the Founder and Chief Promoter of WILHAM & Co., he drives the firm’s mission
-of bridging investor trust gaps, restoring financial transparency, and fostering
-sustainable business growth through expert consulting and strategic
-partnerships.
+Chukwuemeka holds a Bachelor’s degree in Actuarial Science from Imo State University, an MSC Statistics from University of Lagos. His academic depth complements his practical expertise in corporate finance business process formulation, performance optimization, and strategic investment management. 
 
-He holds a Bachelor’s degree in Actuarial Science from Imo State University and
-an MSc in Statistics from the University of Lagos. His academic depth
-complements his practical expertise in corporate finance, business process
-formulation, performance optimization, and strategic investment management.
+At WILHAM & Co., he leads a team of professionals dedicated to investment consulting, technology integration, accounting excellence, business structuring, and process formulation — helping organizations scale with integrity, clarity, and measurable impact. His leadership philosophy centers on integrity, innovation, and insight, ensuring every client engagement fosters trust, drives growth, and delivers enduring value. Beyond his technical expertise, Chukwuemeka is also a transformational leader, mentor, and critical thinking facilitator, empowering individuals and organizations to think strategically, act ethically, and grow sustainably. Under his stewardship, Taniquest continues to redefine professional consulting through transparency-driven advisory, strategic financial management, and technology-enabled business transformation. 
 
-At WILHAM & Co., he leads a multidisciplinary team dedicated to investment
-consulting, technology integration, accounting excellence, and business
-structuring. His leadership philosophy is rooted in integrity, innovation, and
-insight, ensuring measurable impact and long-term value for clients.
-
-Beyond his technical expertise, Chukwuemeka is a transformational leader,
-mentor, and critical-thinking facilitator, empowering organizations to grow
-ethically and sustainably.
     `,
   },
   {
@@ -36,36 +21,21 @@ ethically and sustainably.
     img: "/images/partner.jpg",
     name: "Tyopev Hemen",
     bio: `
-Tyopev Hemen is the Managing Director and Co-Founder of WILHAM & Co.,
-overseeing the Business Development function. His passion lies in driving
-market disruption, enabling competitive dominance, and securing sustainable
-market leadership for the organization.
+Tyopev Hemen is the Managing Director and a Co-Founder Consultant in charge of the Business Development department of WILHAM & Co. His passion is to always cause disruption for major competitors, thereby gaining full entry, and maintaining market lead and dominance for the company. He engages in corporate research and findings through data mining and analysis into the business world thereby ensuring the speedy but accurate attainment of corporate goals and meeting major stakeholders’ short and long-term interests. 
 
-He specializes in corporate research, data mining, and market analysis,
-ensuring accurate and timely execution of strategic objectives while meeting
-both short- and long-term stakeholder interests.
+He has to his credit the corporate experience of developing new brands and promotion of products that have driven the sales volumes of the former employers that have sought and enjoyed his professional service and business development expertise which cut across various sectors including Oil & Gas, Finance, Public & Private Sector.
 
-Tyopev has successfully developed new brands and led product promotions that
-significantly increased sales volumes for previous employers. His professional
-experience spans Oil & Gas, Finance, and both Public and Private sectors.
+He is a graduate of the University of Mkar, Benue State where he obtained an BSC. in Economics. He is also a chartered Associate Member of the Institute of Marketing of Nigeria. He also holds a Chartered Post-Graduate Diploma in Marketing from the International Institute of Marketing. 
 
-He is a graduate of the University of Mkar, Benue State, where he earned a BSc
-in Economics. He is also a Chartered Associate Member of the Institute of
-Marketing of Nigeria and holds a Chartered Postgraduate Diploma in Marketing
-from the International Institute of Marketing.
     `,
   },
 ];
 
-// helper function to shorten text
-const truncateText = (text, length = 200) =>
-  text.length > length ? text.slice(0, length) + "..." : text;
-
 const MeetTheTeam = () => {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [flippedIndex, setFlippedIndex] = useState(null);
 
-  const toggleBio = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
+  const handleCardClick = (index) => {
+    setFlippedIndex(flippedIndex === index ? null : index);
   };
 
   return (
@@ -85,74 +55,87 @@ const MeetTheTeam = () => {
         {/* Team Grid */}
         <div className="grid gap-10 md:grid-cols-2">
           {teamMembers.map((member, index) => {
-            const isOpen = openIndex === index;
+            const isFlipped = flippedIndex === index;
 
             return (
               <div
                 key={index}
-                onClick={() => toggleBio(index)}
-                className="
-                  group
-                  bg-gray-50 
-                  rounded-2xl 
-                  border 
-                  border-gray-100 
-                  p-8 
-                  shadow-sm 
-                  hover:shadow-md 
-                  transition
-                  cursor-pointer
-                "
+                className="relative h-[500px]"
+                style={{ perspective: "1000px" }}
               >
-                {/* Profile */}
-                <div className="flex flex-col items-center text-center">
-                  <img
-                    src={member.img}
-                    alt={member.name}
-                    className="w-32 h-32 rounded-full object-cover mb-4"
-                  />
-                  <h3 className="text-xl font-semibold text-gray-900">
-                    {member.name}
-                  </h3>
-                  <p className="text-customOrange text-sm mt-1">
-                    {member.role}
-                  </p>
-                </div>
-
-                {/* Biography */}
                 <div
-                  className={`
-                    mt-6
-                    text-sm 
-                    text-gray-700 
-                    leading-relaxed 
-                    whitespace-pre-line 
-                    transition-all 
-                    duration-300
-                    ${
-                      isOpen
-                        ? "max-h-[1200px]"
-                        : "max-h-[110px] overflow-hidden"
-                    }
-                    md:group-hover:max-h-[1200px]
-                  `}
+                  onClick={() => handleCardClick(index)}
+                  onMouseEnter={() => window.innerWidth >= 768 && setFlippedIndex(index)}
+                  onMouseLeave={() => window.innerWidth >= 768 && setFlippedIndex(null)}
+                  className="relative w-full h-full cursor-pointer"
+                  style={{
+                    transformStyle: "preserve-3d",
+                    transition: "transform 0.6s",
+                    transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
+                  }}
                 >
-                  {isOpen
-                    ? member.bio
-                    : truncateText(member.bio)}
-                </div>
+                  {/* Front of Card */}
+                  <div
+                    className="absolute w-full h-full bg-gray-50 rounded-2xl border border-gray-100 p-8 shadow-sm"
+                    style={{
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
+                    }}
+                  >
+                    <div className="flex flex-col items-center text-center h-full justify-center">
+                      <img
+                        src={member.img}
+                        alt={member.name}
+                        className="w-40 h-40 rounded-full object-cover mb-6 shadow-md"
+                      />
+                      <h3 className="text-2xl font-semibold text-gray-900">
+                        {member.name}
+                      </h3>
+                      <p className="text-orange-500 text-base mt-3 font-medium">
+                        {member.role}
+                      </p>
+                      <p className="mt-8 text-sm text-gray-400">
+                        <span className="hidden md:inline">Hover</span>
+                        <span className="md:hidden">Tap</span>
+                        {" "}to read bio
+                      </p>
+                    </div>
+                  </div>
 
-                {/* Hint */}
-                <p className="mt-4 text-xs text-gray-400 md:hidden text-center">
-                  Tap to {isOpen ? "collapse" : "read more"}
-                </p>
-                <p className="mt-4 text-xs text-gray-400 hidden md:block text-center">
-                  Hover to read full biography
-                </p>
+                  {/* Back of Card */}
+                  <div
+                    className="absolute w-full h-full bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl border border-gray-200 p-8 shadow-md overflow-y-auto"
+                    style={{
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
+                      transform: "rotateY(180deg)",
+                    }}
+                  >
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between mb-4">
+                        <h4 className="text-lg font-bold text-gray-900">
+                          Biography
+                        </h4>
+                        <span className="text-orange-500 text-sm">
+                          {member.name.split(" ")[0]}
+                        </span>
+                      </div>
+                      <div className="text-sm text-gray-700 leading-relaxed whitespace-pre-line">
+                        {member.bio}
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             );
           })}
         </div>
+
+        {/* Instructions */}
+        <p className="text-center text-sm text-gray-500 mt-8">
+          <span className="hidden md:inline">Hover over cards to flip and read full biographies</span>
+          <span className="md:hidden">Tap cards to flip and read full biographies</span>
+        </p>
       </div>
     </section>
   );
