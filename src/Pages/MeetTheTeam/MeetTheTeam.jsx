@@ -91,7 +91,7 @@ const MeetTheTeam = () => {
                       <h3 className="text-2xl font-semibold text-gray-900">
                         {member.name}
                       </h3>
-                      <p className="text-orange-500 text-base mt-3 font-medium">
+                      <p className="text-customOrange text-base mt-3 font-medium">
                         {member.role}
                       </p>
                       <p className="mt-8 text-sm text-gray-400">
@@ -116,7 +116,7 @@ const MeetTheTeam = () => {
                         <h4 className="text-lg font-bold text-gray-900">
                           Biography
                         </h4>
-                        <span className="text-orange-500 text-sm">
+                        <span className="text-customOrange text-sm">
                           {member.name.split(" ")[0]}
                         </span>
                       </div>
@@ -131,11 +131,6 @@ const MeetTheTeam = () => {
           })}
         </div>
 
-        {/* Instructions */}
-        <p className="text-center text-sm text-gray-500 mt-8">
-          <span className="hidden md:inline">Hover over cards to flip and read full biographies</span>
-          <span className="md:hidden">Tap cards to flip and read full biographies</span>
-        </p>
       </div>
     </section>
   );
