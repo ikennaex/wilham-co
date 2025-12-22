@@ -35,9 +35,9 @@ const RealEstateMarketing = () => {
       <div className="max-w-7xl mx-auto px-6 py-20">
         {/* Header */}
         <div className="max-w-3xl">
-          <h1 className="mt-4 text-4xl md:text-5xl font-bold leading-tight">
+          <h2 className="mt-4 text-4xl md:text-5xl font-bold leading-tight">
             Real Estate Marketing
-          </h1>
+          </h2>
         </div>
 
         {/* Content */}

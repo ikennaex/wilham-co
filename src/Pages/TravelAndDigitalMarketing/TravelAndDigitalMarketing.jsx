@@ -58,9 +58,9 @@ const TravelAndDigitalMarketing = () => {
         <div className=" rounded-2xl shadow-lg p-8 md:p-12 mb-16">
           <div className="flex flex-col lg:flex-row gap-8 items-center">
             <div className="lg:w-2/3">
-              <h1 className="text-3xl md:text-4xl font-bold  mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold  mb-6">
                 We're International Education and Study Abroad Consultants in Lagos Nigeria.
-              </h1>
+              </h2>
               
               <div className="space-y-4 leading-relaxed">
                 <p>

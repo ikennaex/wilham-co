@@ -6,9 +6,9 @@ const HRConsulting = () => {
     <section className="mt-20 bg-black/95 text-white">
       <div className="max-w-7xl mx-auto px-6 py-20">
         <div className="max-w-3xl">
-          <h1 className="mt-4 text-4xl md:text-5xl font-bold leading-tight">
+          <h2 className="mt-4 text-4xl md:text-5xl font-bold leading-tight">
             HR Consulting
-          </h1>
+          </h2>
 
           <p className="mt-6 text-lg text-gray-300 leading-relaxed">
             Sustainable HR Solutions That Drive Business Growth —
