@@ -68,10 +68,10 @@ const Footer = () => {
             </p>
 
             <a
-              href="mailto:thaifchikiezmanltd@gmail.com"
+              href="mailto:info@wilhamco.ng"
               className="block mt-4 text-sm hover:text-customOrange transition"
             >
-              info@wilhamandco.com
+              info@wilhamco.ng
             </a>
 
             <a

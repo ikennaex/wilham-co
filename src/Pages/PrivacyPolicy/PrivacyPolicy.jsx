@@ -20,7 +20,7 @@ const PrivacyPolicy = () => {
             <p>WILHAM & CO. LTD.</p>
             <p>Watch Tower Drive, Elemoro Estate, Ibeju-Lekki, Lagos State</p>
             <p>Phone: +234 816 668 7358, +234 810 620 7080</p>
-            <p>Email: info@wilhamandco.com; wilham.co@gmail.com</p>
+            <p>Email: info@wilhamco.ng; wilham.co@gmail.com</p>
           </section>
 
           <section>
@@ -95,7 +95,7 @@ const PrivacyPolicy = () => {
             <p>WILHAM & CO. LTD.</p>
             <p>Watch Tower Drive, Elemoro Estate, Ibeju-Lekki, Lagos State</p>
             <p>Phone: +234 816 668 7358, +234 810 620 7080</p>
-            <p>Email: info@wilhamandco.com; wilham.co@gmail.com</p>
+            <p>Email: info@wilhamco.ng; wilham.co@gmail.com</p>
           </section>
         </div>
       </div>

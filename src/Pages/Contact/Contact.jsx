@@ -57,10 +57,10 @@ const ContactPage = () => {
             <div className="flex items-center gap-3 text-gray-900">
               <Mail className="w-5 h-5" />
               <a
-                href="mailto:enquiry@phillipsconsulting.net"
+                href="mailto:info@wilhamco.ng"
                 className="font-medium hover:underline"
               >
-                info@wilhamandco.com
+                info@wilhamco.ng
               </a>
             </div>
 

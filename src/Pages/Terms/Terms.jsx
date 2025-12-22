@@ -21,7 +21,7 @@ const Terms = () => {
             <p>WILHAM & CO. LTD.</p>
             <p>Watch Tower Drive, Elemoro Estate, Ibeju-Lekki, Lagos State</p>
             <p>Phone: +234 816 668 7358, +234 810 620 7080</p>
-            <p>Email: <strong>info@yournewemail.com</strong>; wilham.co@gmail.com</p>
+            <p>Email: <strong>info@wilhamco.ng</strong>; wilham.co@gmail.com</p>
           </section>
 
           <section>
@@ -112,7 +112,7 @@ const Terms = () => {
             <p>WILHAM & CO. LTD.</p>
             <p>Watch Tower Drive, Elemoro Estate, Ibeju-Lekki, Lagos State</p>
             <p>Phone: +234 816 668 7358, +234 810 620 7080</p>
-            <p>Email: <strong>info@yournewemail.com</strong>; wilham.co@gmail.com</p>
+            <p>Email: <strong>info@wilhamco.ng</strong>; wilham.co@gmail.com</p>
           </section>
 
           <section>
