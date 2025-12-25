@@ -88,14 +88,13 @@ const WhyChooseUs = () => {
           {/* Culture & Values */}
           <div className="bg-gray-800 p-6 rounded-xl shadow-inner">
             <h3 className="text-xl font-semibold text-white mb-4">
-              Culture & Values
+              Our Core Values
             </h3>
             <ul className="list-disc list-inside text-gray-300 space-y-1">
               <li>Integrity</li>
               <li>Respect</li>
               <li>Communication</li>
               <li>Excellence</li>
-              <li>Globally Focused</li>
               <li>People Oriented</li>
               <li>Result Oriented</li>
             </ul>

@@ -47,8 +47,7 @@ const About = () => {
                 focus on maximizing people and corporate performance. Our
                 practice areas include Human Resource Consulting, Business
                 Consulting, Real Estate Marketing, Business Contractors,
-                Financial Management, Travel Consulting, Digital Marketing
-                Agency.
+                Financial Management, Travel Consulting, Digital Marketing.
               </p>
 
               <p>

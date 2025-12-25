@@ -9,7 +9,7 @@ const menuItems = [
   { name: "REAL ESTATE MARKETING", link: "/real-estate-marketing" },
   { name: "BUSINESS CONTRACTORS", link: "/business-contractors" },
   { name: "FINANCE CONSULTING", link: "/finance-consulting" },
-  { name: "TRAVEL & DIGITAL MARKETING AGENCY", link: "/travel-and-digital-marketing" },
+  { name: "TRAVEL & DIGITAL MARKETING", link: "/travel-and-digital-marketing" },
   { name: "About Us", link: "/about" },
   { name: "Why Choose Us", link: "/whychooseus" },
   { name: "Contact", link: "/contact" },
