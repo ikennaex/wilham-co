@@ -10,7 +10,7 @@ Chukwuemeka is a distinguished finance executive, business strategist, and trans
 advisory, and corporate restructuring. As the Founder and Chief Promoter of WILHAM & CO., he drives the firm’s mission of bridging investor trust gaps, restoring financial 
 transparency, and fostering sustainable business growth through expert consulting and strategic partnerships.  
 
-Chukwuemeka holds a Bachelor’s degree in Actuarial Science from Imo State University, an MSC Statistics from University of Lagos. His academic depth complements his practical expertise in corporate finance business process formulation, performance optimization, and strategic investment management. 
+Chukwuemeka holds a Bachelor’s degree in Actuarial Science from Imo State University, an MBA in Marketing & Strategy from MIVA OPEN UNIVERSITY. His academic depth complements his practical expertise in strategic planning, leadership, and consumer insights. He also has extensive knowledge in corporate finance, business process formulation, performance optimization, strategic investment management.
 
 At WILHAM & Co., he leads a team of professionals dedicated to investment consulting, technology integration, accounting excellence, business structuring, and process formulation — helping organizations scale with integrity, clarity, and measurable impact. His leadership philosophy centers on integrity, innovation, and insight, ensuring every client engagement fosters trust, drives growth, and delivers enduring value. Beyond his technical expertise, Chukwuemeka is also a transformational leader, mentor, and critical thinking facilitator, empowering individuals and organizations to think strategically, act ethically, and grow sustainably. Under his stewardship, Taniquest continues to redefine professional consulting through transparency-driven advisory, strategic financial management, and technology-enabled business transformation. 
 
@@ -65,8 +65,12 @@ const MeetTheTeam = () => {
               >
                 <div
                   onClick={() => handleCardClick(index)}
-                  onMouseEnter={() => window.innerWidth >= 768 && setFlippedIndex(index)}
-                  onMouseLeave={() => window.innerWidth >= 768 && setFlippedIndex(null)}
+                  onMouseEnter={() =>
+                    window.innerWidth >= 768 && setFlippedIndex(index)
+                  }
+                  onMouseLeave={() =>
+                    window.innerWidth >= 768 && setFlippedIndex(null)
+                  }
                   className="relative w-full h-full cursor-pointer"
                   style={{
                     transformStyle: "preserve-3d",
@@ -96,8 +100,7 @@ const MeetTheTeam = () => {
                       </p>
                       <p className="mt-8 text-sm text-gray-400">
                         <span className="hidden md:inline">Hover</span>
-                        <span className="md:hidden">Tap</span>
-                        {" "}to read bio
+                        <span className="md:hidden">Tap</span> to read bio
                       </p>
                     </div>
                   </div>
@@ -130,7 +133,6 @@ const MeetTheTeam = () => {
             );
           })}
         </div>
-
       </div>
     </section>
   );
